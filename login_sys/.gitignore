@@ -1,0 +1,11 @@
+# Ignore Python virtual environment
+backend/__pycache__/
+accounts/__pycache__/
+
+# Ignore environment variables file
+backend/.env/
+*.env
+
+# Ignore node_modules for React
+frontend/node_modules/
+backend/node_modules/

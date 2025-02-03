@@ -1,0 +1,65 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  overflow-y: auto; /* Ensures scrolling */
+}
+
+/* Ensuring content is below navbar */
+.content {
+  padding-top: 80px; /*navbar height */
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.content.sidebar-open {
+  margin-left: 250px; /* Ensures sidebar does not overlap content */
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 768px) {
+  .menu.open ~ .content {
+    margin-top: 250px; /* Pushes content down when sidebar opens */
+  }
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 2px solid #ddd;
+  padding: 10px 0;
+  background: white;
+}
+
+.tab-link {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #004d40;
+  font-weight: bold;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-link.active {
+  border-bottom: 3px solid #004d40;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #004d40;
+  color: white;
+  position: relative;
+  width: 100%;
+}
